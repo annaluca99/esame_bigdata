@@ -5,7 +5,7 @@ AUTH = ("neo4j", "tourism123")
 
 driver = GraphDatabase.driver(URI, auth=AUTH)
 
-session = driver.session(database="neo4j")
+session = driver.session(database="ente-turistico")
 
 # Scrittura: crea o aggiorna un nodo Movie
 result = session.run("""MATCH (l:Luogo)-[:INCLUSO_IN]->(i:Itinerario) 
