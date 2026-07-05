@@ -24,8 +24,9 @@ Come interfaccia per costruire questo DBSM usiamo DBeaver.
 ## dunque per l'esecuzione delle query sulla powershell è stato costruito il file sql.py
 
 ### immagini SQL
-![SQL](images/struttura_ER.png)
-![SQL](images/schema_logico.png)
+
+![SQL](images/struttura_ER.jpeg)
+![SQL](images/schema_logico.jpeg)
 ![SQL](images/diagramma_ER_singole_entità.png)
 ![SQL](images/diagramma_ER.jpeg)
 
