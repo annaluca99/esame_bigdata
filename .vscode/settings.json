@@ -3,8 +3,8 @@
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "name": "connessione_cinema",
-            "database": "\"C:\\Users\\Amministratore\\Desktop\\Analisi dei dati e big data\\esame_bigdata\\SQL_DBeaver\\cinema-sql.db\""
+            "database": "${workspaceFolder:esame_bigdata}/SQL_DBeaver/cinema.db",
+            "name": "connessione-cinema__"
         }
     ],
     "sqltools.useNodeRuntime": true

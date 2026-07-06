@@ -47,15 +47,12 @@ for row in rows2:
 
 # --- Query 3: Tasso di occupazione per sala ---
 cursor.execute("""
-SELECT 
-    SA.id_sala, 
-    SA.capienza, 
-    COUNT(B.id_biglietto) AS Biglietti_Venduti,
-    (COUNT(B.id_biglietto) * 100.0 / SA.capienza) AS Tasso_Occupazione_Percentuale
-FROM SALA AS SA
-LEFT JOIN SPETTACOLO AS S ON SA.id_sala = S.n_sala
+SELECT S.n_sala, SA.capienza, COUNT(B.id_biglietto) AS Biglietti_Venduti,
+       (COUNT(B.id_biglietto) * 100.0 / SA.capienza) AS Tasso_Occupazione_Percentuale
+FROM SPETTACOLO AS S
+JOIN SALA AS SA ON S.n_sala = SA.id_sala
 LEFT JOIN BIGLIETTO AS B ON S.id_spettacolo = B.id_spettacolo
-GROUP BY SA.id_sala, SA.capienza
+GROUP BY S.n_sala, SA.capienza
 ORDER BY Tasso_Occupazione_Percentuale DESC;
 """)
 rows3 = cursor.fetchall()
