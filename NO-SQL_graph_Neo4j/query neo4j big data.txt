@@ -611,7 +611,7 @@ RETURN l.nome AS Luogo, l.comune AS Citta, l.tipologia AS Tipo, i.nome AS NomeIt
 
 //Query 2
 
-MATCH (e1:Evento)-[:SI_SVOLGE_IN]->(l1:Luogo)-[:VICINO_A]-(l2:Luogo)<-[:SI_SVOLGE_IN]-(e2:Evento) //Questa si legge a partire dal centro, 
+MATCH (e1:Evento)-[:SI_SVOLGE_IN]->(l1:Luogo)-[:VICINO_A|SIMILE_A]-(l2:Luogo)<-[:SI_SVOLGE_IN]-(e2:Evento) //Questa si legge a partire dal centro, 
 WHERE e1 <> e2 // Gli eventi devono essere diversi, in modo tale che il percorso non ritorni al nodo di partenza
 RETURN e1.titolo AS Evento1, l1.nome AS NelLuogo, e2.titolo AS Evento2, l2.nome AS VicinoALuogo;
 
