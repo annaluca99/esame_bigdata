@@ -32,7 +32,7 @@ RETURN DISTINCT
     """)
 
 print(
-    "\nQuery 2 - Eventi vicini per luogo o tema: (Evento_1, Tema_1, Luogo_1, Evento_2, Tema_2, Luogo_2)"
+    "\nQuery 2 - Eventi vicini per luogo o con lo stesso tema culturale: (Evento_1, Tema_1, Luogo_1, Evento_2, Tema_2, Luogo_2)"
 )
 for record in result2:
     print(
